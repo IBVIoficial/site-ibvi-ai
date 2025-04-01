@@ -52,7 +52,7 @@ function Stats() {
         />
       </div>
       <Container>
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl py-24">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-base font-semibold uppercase tracking-wide text-white">Nossos Resultados</h2>
             <p className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">

@@ -26,29 +26,26 @@ import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+    <div className="mt-24 rounded-4xl bg-dark-green py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Nossa Cultura"
+        title="Inovação, Precisão e Transparência"
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          Somos um grupo de profissionais unidos por valores essenciais que guiam nosso trabalho no IBVI.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Inovação Contínua" invert>
+            Buscamos constantemente novas tecnologias e métodos para aprimorar nossas análises e soluções de avaliação imobiliária.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Precisão e Dados" invert>
+            Nossa base é a análise rigorosa de dados, garantindo avaliações confiáveis e transparentes para o mercado.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Colaboração e Integridade" invert>
+            Trabalhamos em parceria com nossos clientes e o mercado, sempre pautados pela ética e transparência em nossas ações.
           </GridListItem>
         </GridList>
       </Container>
@@ -58,7 +55,7 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
+    title: 'Liderança', 
     people: [
       {
         name: 'Leslie Alexander',
@@ -78,7 +75,7 @@ const team = [
     ],
   },
   {
-    title: 'Team',
+    title: 'Equipe', 
     people: [
       {
         name: 'Chelsea Hagon',
@@ -138,7 +135,7 @@ function Team() {
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h2 className="font-display text-2xl font-semibold text-dark-green">
                   {group.title}
                 </h2>
               </FadeIn>
@@ -179,9 +176,9 @@ function Team() {
 }
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'Sobre Nós - IBVI',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Conheça o IBVI, nossa missão de transformar o mercado imobiliário brasileiro através de dados, tecnologia e uma abordagem colaborativa focada no cliente.',
 }
 
 export default async function About() {
@@ -189,31 +186,24 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="Sobre Nós" title="Transformando o Mercado Imobiliário com Inteligência de Dados">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          No IBVI, acreditamos que a força da nossa abordagem reside na colaboração e na aplicação de tecnologia avançada para trazer transparência e eficiência ao setor imobiliário brasileiro.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
+        <div className="mt-10 max-w-2xl space-y-6 text-base text-neutral-700">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Fundado com a visão de ser a referência em avaliações imobiliárias no Brasil, o IBVI nasceu da necessidade de padronização e precisão em um mercado complexo e de alto valor. Identificamos as lacunas deixadas por métodos tradicionais e desenvolvemos soluções baseadas em IA e Big Data.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            Nossa missão é empoderar compradores, vendedores, investidores e profissionais do setor com informações confiáveis e análises preditivas, facilitando transações mais justas e eficientes. Somos mais que uma empresa de tecnologia; somos parceiros na evolução do ecossistema imobiliário.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="10M+" label="Pontos de Dados Analisados" />
+          <StatListItem value="90%+" label="Precisão Média nas Avaliações" />
+          <StatListItem value="50+" label="Parceiros no Ecossistema" />
         </StatList>
       </Container>
 
@@ -223,8 +213,8 @@ export default async function About() {
 
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
+        title="Do nosso Blog"
+        intro="Acompanhe nossas últimas análises, insights sobre o mercado imobiliário e novidades sobre as tecnologias que estamos desenvolvendo para revolucionar o setor."
         pages={blogArticles}
       />
 

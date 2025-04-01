@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import Image from 'next/image'
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'Projetos',
     links: [
       { title: 'FamilyFund', href: '/work/family-fund' },
       { title: 'Unseal', href: '/work/unseal' },
@@ -15,7 +15,7 @@ const navigation = [
       {
         title: (
           <>
-            See all <span aria-hidden="true">&rarr;</span>
+            Ver todos <span aria-hidden="true">&rarr;</span>
           </>
         ),
         href: '/work',
@@ -23,16 +23,16 @@ const navigation = [
     ],
   },
   {
-    title: 'Company',
+    title: 'Empresa',
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
+      { title: 'Sobre', href: '/about' },
+      { title: 'Tecnologia', href: '/process' },
       { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Contato', href: '/contact' },
     ],
   },
   {
-    title: 'Connect',
+    title: 'Conecte-se',
     links: socialMediaProfiles,
   },
 ]
@@ -82,25 +82,25 @@ function NewsletterForm() {
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        Assine nossa newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Inscreva-se para receber as últimas notícias, artigos, recursos e
+        inspiração sobre design.
       </p>
       <div className="relative mt-6">
         <input
           type="email"
-          placeholder="Email address"
+          placeholder="Endereço de email"
           autoComplete="email"
-          aria-label="Email address"
+          aria-label="Endereço de email"
           className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pr-20 pl-6 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
             type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+            aria-label="Enviar"
+            className="flex aspect-square h-full items-center justify-center rounded-xl bg-dark-green text-white transition hover:bg-neutral-800"
           >
             <ArrowIcon className="w-4" />
           </button>
@@ -122,10 +122,10 @@ export function Footer() {
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+            <Image src="/images/ibvi.png" alt="IBVI" width={100} height={100} />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © IBVI AI {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

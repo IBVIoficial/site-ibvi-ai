@@ -1,0 +1,33 @@
+/* Custom color definitions for the site */
+:root {
+  --color-dark-green: #1b4d3e;
+  --color-dark-green-light: #2a7057;
+  --color-dark-green-dark: #13352b;
+}
+
+/* Define utility classes for the new color */
+@layer utilities {
+  .text-dark-green {
+    color: var(--color-dark-green);
+  }
+  
+  .bg-dark-green {
+    background-color: var(--color-dark-green);
+  }
+  
+  .border-dark-green {
+    border-color: var(--color-dark-green);
+  }
+  
+  .ring-dark-green {
+    --tw-ring-color: var(--color-dark-green);
+  }
+  
+  .hover\:bg-dark-green-light:hover {
+    background-color: var(--color-dark-green-light);
+  }
+  
+  .focus-visible\:outline-dark-green:focus-visible {
+    outline-color: var(--color-dark-green);
+  }
+}

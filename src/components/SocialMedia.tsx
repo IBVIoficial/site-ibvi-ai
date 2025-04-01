@@ -49,11 +49,21 @@ function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M13.312 11.043L21.875 0h-1.9L13.12 9.91L8.608 0H0l8.89 12.85L0 24h1.9l7.342-8.78L14.92 24h8.608L13.312 11.043ZM11.528 13.727L10.7 12.625L2.547 1.45h2.7L12 10.973l.828 1.102L20.98 22.55h-2.7L11.528 13.728Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
-  { title: 'Dribbble', href: 'https://dribbble.com', icon: DribbbleIcon },
+  { title: 'Instagram', href: 'https://instagram.com/ibviai', icon: InstagramIcon },
+  { title: 'GitHub', href: 'https://github.com/IBVIoficial', icon: GitHubIcon },
+  { title: 'X', href: 'https://x.com/ibviai', icon: XIcon },
 ]
 
 export function SocialMedia({

@@ -23,11 +23,11 @@ function TextInput({
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base/6 text-neutral-950 ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden"
+        className="peer block w-full border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base/6 text-dark-green ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-dark-green focus:ring-dark-green/5 focus:outline-none"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute top-1/2 left-6 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:font-semibold peer-not-placeholder-shown:text-neutral-950 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950"
+        className="pointer-events-none absolute top-1/2 left-6 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:font-semibold peer-not-placeholder-shown:text-dark-green peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-dark-green"
       >
         {label}
       </label>
@@ -44,9 +44,9 @@ function RadioInput({
       <input
         type="radio"
         {...props}
-        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-hidden checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
+        className="h-6 w-6 flex-none appearance-none rounded-full border border-dark-green/20 outline-none checked:border-[0.5rem] checked:border-dark-green focus-visible:ring-1 focus-visible:ring-dark-green focus-visible:ring-offset-2"
       />
-      <span className="text-base/6 text-neutral-950">{label}</span>
+      <span className="text-base/6 text-dark-green">{label}</span>
     </label>
   )
 }
@@ -54,12 +54,12 @@ function RadioInput({
 function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form>
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
+      <form action="#" method="POST"> {/* Added action and method for clarity */}
+        <h2 className="font-display text-base font-semibold text-dark-green">
+          Consultas e Parcerias
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" />
+          <TextInput label="Nome" name="name" autoComplete="name" />
           <TextInput
             label="Email"
             type="email"
@@ -67,26 +67,26 @@ function ContactForm() {
             autoComplete="email"
           />
           <TextInput
-            label="Company"
+            label="Empresa"
             name="company"
             autoComplete="organization"
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-          <TextInput label="Message" name="message" />
+          <TextInput label="Telefone" type="tel" name="phone" autoComplete="tel" />
+          <TextInput label="Mensagem" name="message" />
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
-              <legend className="text-base/6 text-neutral-500">Budget</legend>
+              <legend className="text-base/6 text-neutral-500">Assunto</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
+                <RadioInput label="Consulta Geral" name="subject" value="general" />
+                <RadioInput label="Análise de Mercado" name="subject" value="market_analysis" />
+                <RadioInput label="Parceria Estratégica" name="subject" value="partnership" />
+                <RadioInput label="Outro" name="subject" value="other" />
               </div>
             </fieldset>
           </div>
         </div>
-        <Button type="submit" className="mt-10">
-          Let’s work together
+        <Button type="submit" className="mt-10 bg-dark-green hover:bg-dark-green-light">
+          Enviar Mensagem
         </Button>
       </form>
     </FadeIn>
@@ -96,31 +96,30 @@ function ContactForm() {
 function ContactDetails() {
   return (
     <FadeIn>
-      <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
+      <h2 className="font-display text-base font-semibold text-dark-green">
+        Nossos Escritórios
       </h2>
-      <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+      <p className="mt-6 text-base text-neutral-700">
+        Prefere contato presencial? Veja nossos endereços ou entre em contato pelos canais digitais.
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
 
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Email us
+        <h2 className="font-display text-base font-semibold text-dark-green">
+          Envie um Email
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['Carreiras', 'carreiras@ibvi.com.br'], // Example email
+            ['Imprensa', 'imprensa@ibvi.com.br'],   // Example email
           ].map(([label, email]) => (
             <div key={email}>
-              <dt className="font-semibold text-neutral-950">{label}</dt>
+              <dt className="font-semibold text-dark-green">{label}</dt>
               <dd>
                 <Link
                   href={`mailto:${email}`}
-                  className="text-neutral-600 hover:text-neutral-950"
+                  className="text-neutral-700 hover:text-dark-green"
                 >
                   {email}
                 </Link>
@@ -131,8 +130,8 @@ function ContactDetails() {
       </Border>
 
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
+        <h2 className="font-display text-base font-semibold text-dark-green">
+          Siga-nos
         </h2>
         <SocialMedia className="mt-6" />
       </Border>
@@ -141,15 +140,15 @@ function ContactDetails() {
 }
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  title: 'Contato - IBVI',
+  description: 'Entre em contato com o IBVI. Estamos prontos para atender você e discutir como nossas soluções podem beneficiar seus negócios imobiliários.',
 }
 
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <PageIntro eyebrow="Contato" title="Fale Conosco">
+        <p className="text-neutral-700">Tem alguma dúvida ou proposta? Preencha o formulário ou utilize nossos outros canais de contato.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">

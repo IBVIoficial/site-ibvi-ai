@@ -1,0 +1,31 @@
+/* Custom color definitions for dark-green */
+
+:root {
+  --dark-green: #1b4d3e;
+  --dark-green-light: #2a7057;
+  --dark-green-dark: #13352b;
+}
+
+.text-dark-green {
+  color: var(--dark-green);
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green);
+}
+
+.hover\:bg-dark-green-light:hover {
+  background-color: var(--dark-green-light);
+}
+
+.border-dark-green {
+  border-color: var(--dark-green);
+}
+
+.ring-dark-green {
+  --tw-ring-color: var(--dark-green);
+}
+
+.focus-visible\:outline-dark-green:focus-visible {
+  outline-color: var(--dark-green);
+}

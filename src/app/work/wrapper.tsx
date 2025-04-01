@@ -23,29 +23,33 @@ export default async function CaseStudyLayout({
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
-          <PageIntro eyebrow="Case Study" title={caseStudy.title} centered>
+          <PageIntro eyebrow="Estudo de Caso" title={caseStudy.title} centered>
             <p>{caseStudy.description}</p>
           </PageIntro>
 
           <FadeIn>
-            <div className="mt-24 border-t border-neutral-200 bg-white/50 sm:mt-32 lg:mt-40">
+            {/* Changed border color */}
+            <div className="mt-24 border-t border-dark-green/10 bg-white/50 sm:mt-32 lg:mt-40">
               <Container>
                 <div className="mx-auto max-w-5xl">
-                  <dl className="-mx-6 grid grid-cols-1 text-sm text-neutral-950 sm:mx-0 sm:grid-cols-3">
-                    <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-t-0 sm:border-l">
-                      <dt className="font-semibold">Client</dt>
+                  {/* Changed text and border colors */}
+                  <dl className="-mx-6 grid grid-cols-1 text-sm text-dark-green sm:mx-0 sm:grid-cols-3">
+                    <div className="border-t border-dark-green/10 px-6 py-4 first:border-t-0 sm:border-t-0 sm:border-l sm:border-l-dark-green/10">
+                      <dt className="font-semibold">Cliente</dt>
                       <dd>{caseStudy.client}</dd>
                     </div>
-                    <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-t-0 sm:border-l">
-                      <dt className="font-semibold">Year</dt>
+                    {/* Changed border color */}
+                    <div className="border-t border-dark-green/10 px-6 py-4 first:border-t-0 sm:border-t-0 sm:border-l sm:border-l-dark-green/10">
+                      <dt className="font-semibold">Ano</dt>
                       <dd>
                         <time dateTime={caseStudy.date.split('-')[0]}>
                           {caseStudy.date.split('-')[0]}
                         </time>
                       </dd>
                     </div>
-                    <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-t-0 sm:border-l">
-                      <dt className="font-semibold">Service</dt>
+                    {/* Changed border color */}
+                    <div className="border-t border-dark-green/10 px-6 py-4 first:border-t-0 sm:border-t-0 sm:border-l sm:border-l-dark-green/10">
+                      <dt className="font-semibold">Serviço</dt>
                       <dd>{caseStudy.service}</dd>
                     </div>
                   </dl>
@@ -53,8 +57,9 @@ export default async function CaseStudyLayout({
               </Container>
             </div>
 
-            <div className="border-y border-neutral-200 bg-neutral-100">
-              <div className="mx-auto -my-px max-w-[76rem] bg-neutral-200">
+            {/* Changed border and background colors */}
+            <div className="border-y border-dark-green/10 bg-dark-green/5">
+              <div className="mx-auto -my-px max-w-[76rem] bg-dark-green/10">
                 <GrayscaleTransitionImage
                   {...caseStudy.image}
                   quality={90}
@@ -77,7 +82,7 @@ export default async function CaseStudyLayout({
       {moreCaseStudies.length > 0 && (
         <PageLinks
           className="mt-24 sm:mt-32 lg:mt-40"
-          title="More case studies"
+          title="Mais estudos de caso"
           pages={moreCaseStudies}
         />
       )}

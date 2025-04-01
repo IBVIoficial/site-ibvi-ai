@@ -17,7 +17,7 @@ export default function Hero() {
                         clipPath:
                             'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'
                     }}
-                    className='relative aspect-[1155/678] w-[36.125rem] left-[calc(50%-11rem)] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-verde to-verde-escuro opacity-20 sm:w-[72.1875rem] sm:left-[calc(50%-30rem)] dark:from-verde-claro dark:to-verde'
+                    className='relative aspect-[1155/678] w-[36.125rem] left-[calc(50%-11rem)] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-verde to-verde-escuro opacity-60 sm:w-[72.1875rem] sm:left-[calc(50%-30rem)] dark:from-verde-claro dark:to-verde dark:opacity-40'
                 />
             </div>
 
@@ -63,7 +63,7 @@ export default function Hero() {
                         clipPath:
                             'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'
                     }}
-                    className='relative aspect-[1155/678] w-[36.125rem] left-[calc(50%+3rem)] -translate-x-1/2 bg-gradient-to-tr from-verde-claro to-verde opacity-30 sm:w-[72.1875rem] sm:left-[calc(50%+36rem)] dark:from-verde dark:to-verde-escuro'
+                    className='relative aspect-[1155/678] w-[36.125rem] left-[calc(50%+3rem)] -translate-x-1/2 bg-gradient-to-tr from-verde-claro to-verde opacity-60 sm:w-[72.1875rem] sm:left-[calc(50%+36rem)] dark:from-verde dark:to-verde-escuro dark:opacity-40'
                 />
             </div>
         </section>
